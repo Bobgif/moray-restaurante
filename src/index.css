@@ -1,0 +1,26 @@
+@import "tailwindcss";
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+section {
+  scroll-margin-top: 80px;
+}
+.hero-bg {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('./assets/Fondo.webp');
+}
+.hero-parallax {
+  /* Fondo con gradiente y la imagen */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/Fondo.webp');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Tip profesional: Desactivar parallax en móviles para mejor rendimiento */
+@media (max-width: 768px) {
+  .hero-parallax {
+    background-attachment: scroll;
+  }
+}
